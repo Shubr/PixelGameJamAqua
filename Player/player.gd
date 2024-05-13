@@ -1,11 +1,15 @@
-extends Node
+extends CharacterBody2D
 
+@export var speed = 400
+@export var rotation_speed = 1.5
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var rotation_direction = 0
 
+func get_input():
+	rotation_direction = Input.get_axis("ui_left", "ui_right")
+	velocity = transform.x * Input.get_axis("ui_down", "ui_up") * speed
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _physics_process(delta):
+	get_input()
+	rotation += rotation_direction * rotation_speed * delta
+	move_and_slide()
