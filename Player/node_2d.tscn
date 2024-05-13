@@ -1,11 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://buwaw6lgjay4l"]
+[gd_scene load_steps=4 format=3 uid="uid://buwaw6lgjay4l"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4i77k"]
-radius = 7.0
+[ext_resource type="Script" path="res://Player/player.gd" id="1_jfwwp"]
+[ext_resource type="Texture2D" uid="uid://u73kdtgo7w7w" path="res://Assets/Player Sprites/red bean.png" id="1_ln025"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_omjvx"]
+radius = 9.0
+height = 32.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_jfwwp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ln025")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_4i77k")
+shape = SubResource("CapsuleShape2D_omjvx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
