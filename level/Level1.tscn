@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ool2fh4dnpna"]
+
+[ext_resource type="PackedScene" uid="uid://brsxy5putlcop" path="res://Assets/tileMap.tscn" id="1_qjqhd"]
+[ext_resource type="Texture2D" uid="uid://cyanrfx2huj0g" path="res://Assets/Main/Rocky Roads/Deco/water_b_5 frames.png" id="2_8vxdv"]
+[ext_resource type="PackedScene" uid="uid://buwaw6lgjay4l" path="res://Player/node_2d.tscn" id="3_vetee"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_qjqhd")]
+
+[node name="TileMap" parent="TileMap" index="0"]
+layer_0/tile_data = PackedInt32Array(65532, 131075, 1, 65533, 196611, 1, 65534, 196611, 1, 65535, 196611, 1, 0, 196611, 1, 1, 196611, 1, 2, 196611, 1, 3, 196611, 1, 4, 196611, 1)
+
+[node name="WaterB5Frames" type="Sprite2D" parent="."]
+position = Vector2(32, -36)
+scale = Vector2(2.4, 4.5)
+texture = ExtResource("2_8vxdv")
+
+[node name="Player" parent="." instance=ExtResource("3_vetee")]
+position = Vector2(16, -16)
+
+[editable path="TileMap"]
