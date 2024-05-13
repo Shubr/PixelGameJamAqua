@@ -856,6 +856,6 @@ format = 2
 tile_set = SubResource("TileSet_y2qt2")
 format = 2
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Enimies" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tl4hs")
 format = 2
