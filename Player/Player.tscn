@@ -17,4 +17,4 @@ texture = ExtResource("1_ln025")
 shape = SubResource("CapsuleShape2D_omjvx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(2.5, 2.5)
