@@ -9,7 +9,7 @@ var VELOCITY = Vector2(0, 0)
 @export var ACCELERATION_Y = 0.1
 
 @export var JUMP_VELOCITY = 400.0
-@export var GRAVITY = 9
+@export var GRAVITY = 20
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
