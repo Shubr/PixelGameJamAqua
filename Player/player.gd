@@ -1,15 +1,17 @@
 extends CharacterBody2D
 
-@export var speed = 400
-@export var rotation_speed = 1.5
 
-var rotation_direction = 0
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
 
-func get_input():
-	rotation_direction = Input.get_axis("ui_left", "ui_right")
-	velocity = transform.x * Input.get_axis("ui_down", "ui_up") * speed
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
 
 func _physics_process(delta):
-	get_input()
-	rotation += rotation_direction * rotation_speed * delta
+	var direction = Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
 	move_and_slide()

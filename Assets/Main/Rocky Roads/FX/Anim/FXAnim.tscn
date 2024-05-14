@@ -1,0 +1,278 @@
+[gd_scene load_steps=14 format=3 uid="uid://c01wkhydgcxuw"]
+
+[ext_resource type="Texture2D" uid="uid://m0k0uolxol8h" path="res://Assets/Main/Rocky Roads/FX/boing.png" id="1_fo87a"]
+[ext_resource type="Texture2D" uid="uid://bgu22o8otkkx6" path="res://Assets/Main/Rocky Roads/FX/bomb_explosion.png" id="2_c0cep"]
+[ext_resource type="Texture2D" uid="uid://bem2tjqygfm1u" path="res://Assets/Main/Rocky Roads/FX/bubble.png" id="3_e6nch"]
+[ext_resource type="Texture2D" uid="uid://f4hapt2bm1xq" path="res://Assets/Main/Rocky Roads/FX/exclamation.png" id="4_54san"]
+[ext_resource type="Texture2D" uid="uid://boevvy7chun54" path="res://Assets/Main/Rocky Roads/Objects/flag.png" id="5_cbf7w"]
+
+[sub_resource type="Animation" id="Animation_l4nq2"]
+resource_name = "boing"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_ooh3p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Boing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("bomb:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Bubble:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bubble2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Bubble2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 8)]
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Exclamation:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Exclamation:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Flag:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_1auyj"]
+resource_name = "Bomb"
+length = 1.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("bomb:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 0]
+}
+
+[sub_resource type="Animation" id="Animation_8ia13"]
+resource_name = "Bubble"
+length = 0.8
+loop_mode = 2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 3]
+}
+
+[sub_resource type="Animation" id="Animation_hk2r6"]
+resource_name = "Bubble2"
+length = 1.8
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bubble2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 2, 1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bubble2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(80, 8), Vector2(84, 4), Vector2(79, -1), Vector2(84, -7), Vector2(89, -13), Vector2(83, -21), Vector2(87, -26)]
+}
+
+[sub_resource type="Animation" id="Animation_lstfy"]
+resource_name = "exclamation"
+length = 4.0
+loop_mode = 2
+step = 0.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Exclamation:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.436332, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -0.436332, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -0.436332, -0.25, 0, 0.25, 0, 0.436332, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Exclamation:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6)
+}
+
+[sub_resource type="Animation" id="Animation_v88pq"]
+resource_name = "Flag"
+length = 0.7
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flag:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0, 2, -0.25, 0, 0.25, 0, 3, -0.25, 0, 0.25, 0, 4, -0.25, 0, 0.25, 0, 5, -0.25, 0, 0.25, 0, 6, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nvdjy"]
+_data = {
+"Bomb": SubResource("Animation_1auyj"),
+"Bubble": SubResource("Animation_8ia13"),
+"Bubble2": SubResource("Animation_hk2r6"),
+"Flag": SubResource("Animation_v88pq"),
+"RESET": SubResource("Animation_ooh3p"),
+"boing": SubResource("Animation_l4nq2"),
+"exclamation": SubResource("Animation_lstfy")
+}
+
+[node name="FxAnim" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nvdjy")
+}
+
+[node name="Boing" type="Sprite2D" parent="."]
+position = Vector2(-56, 0)
+texture = ExtResource("1_fo87a")
+offset = Vector2(10, 0)
+hframes = 6
+
+[node name="bomb" type="Sprite2D" parent="."]
+position = Vector2(-8, 0)
+texture = ExtResource("2_c0cep")
+hframes = 5
+
+[node name="Bubble" type="Sprite2D" parent="."]
+position = Vector2(40, 8)
+rotation = 4.71239
+texture = ExtResource("3_e6nch")
+hframes = 4
+
+[node name="Bubble2" type="Sprite2D" parent="."]
+position = Vector2(80, 8)
+rotation = 4.71239
+texture = ExtResource("3_e6nch")
+hframes = 4
+
+[node name="Exclamation" type="Sprite2D" parent="."]
+position = Vector2(156, 0)
+texture = ExtResource("4_54san")
+hframes = 7
+
+[node name="Flag" type="Sprite2D" parent="."]
+position = Vector2(203, -1)
+texture = ExtResource("5_cbf7w")
+hframes = 9
