@@ -24,6 +24,12 @@ visible = false
 
 [node name="Player" parent="." instance=ExtResource("3_vetee")]
 position = Vector2(29, -40)
+MAX_VELOCITY_X = null
+ACCELERATION_X = null
+MAX_VELOCITY_Y = null
+ACCELERATION_Y = null
+JUMP_VELOCITY = null
+GRAVITY = null
 
 [editable path="TileMap"]
 [editable path="TileMap/Enimies/FxAnim"]
