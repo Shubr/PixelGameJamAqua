@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://brsxy5putlcop"]
+[gd_scene load_steps=33 format=3 uid="uid://brsxy5putlcop"]
 
 [ext_resource type="Texture2D" uid="uid://j6fbibbro155" path="res://Assets/Main/Rocky Roads/Tilesets/tileset_snow.png" id="1_fkjch"]
 [ext_resource type="Texture2D" uid="uid://xghee77q2522" path="res://Assets/Main/Rocky Roads/Tilesets/tileset_lava.png" id="2_7s86h"]
@@ -15,8 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://4pphljdvm14j" path="res://Assets/Main/Rocky Roads/Deco/tree_b.png" id="13_kt0iv"]
 [ext_resource type="Texture2D" uid="uid://b0sw81c1hv1x8" path="res://Assets/Main/Rocky Roads/Deco/tree_c.png" id="14_kvryq"]
 [ext_resource type="Texture2D" uid="uid://crfo7c5rc0raw" path="res://Assets/Main/Rocky Roads/Deco/tree_trunk.png" id="15_y5gh0"]
-[ext_resource type="PackedScene" uid="uid://c01wkhydgcxuw" path="res://Assets/Main/Rocky Roads/FX/Anim/FXAnim.tscn" id="17_hb2ud"]
-[ext_resource type="Texture2D" uid="uid://cjjwblndlljaw" path="res://Assets/Main/Rocky Roads/Enemies/slime_red.png" id="29_1i7u1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rdhx4"]
 texture = ExtResource("1_fkjch")
@@ -602,20 +600,6 @@ sources/9 = SubResource("TileSetAtlasSource_a0ygn")
 sources/10 = SubResource("TileSetAtlasSource_ojgn2")
 sources/11 = SubResource("TileSetAtlasSource_4jgdg")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jsp6g"]
-texture = ExtResource("29_1i7u1")
-0:0/animation_columns = 7
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_uppv0"]
-sources/0 = SubResource("TileSetAtlasSource_jsp6g")
-
 [node name="TileMap" type="Node2D"]
 
 [node name="TileSet" type="TileMap" parent="."]
@@ -626,11 +610,3 @@ format = 2
 [node name="Deco" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_y2qt2")
 format = 2
-
-[node name="Enimies" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_uppv0")
-format = 2
-
-[node name="FxAnim" parent="Enimies" instance=ExtResource("17_hb2ud")]
-
-[editable path="Enimies/FxAnim"]
